@@ -3,7 +3,7 @@ import Navigation from "./Navigation";
 import Table from "./Table";
 
 function App() {
-  const BASE_URL = "http://jsonplaceholder.typicode.com";
+  const BASE_URL = "https://jsonplaceholder.typicode.com";
   const [activeNavigation, setActiveNavigation] = useState("users");
   const [items, setItems] = useState([]);
   const [fetchError, setFetchError] = useState(null);
