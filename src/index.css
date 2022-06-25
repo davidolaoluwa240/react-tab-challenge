@@ -1,13 +1,83 @@
-body {
+*,
+*::after,
+*::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: rgb(205, 205, 205);
+}
+
+header {
+  margin-bottom: 4rem;
+}
+
+/* Navigation */
+.navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navigation__lists {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navigation__list {
+  flex-grow: 1;
+  background-color: #eee;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.navigation__list:hover,
+.navigation__list--active {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Lists */
+.lists {
+  list-style-type: square;
+  padding: 1.4rem;
+}
+
+.list:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/* Table */
+.table__data {
+  border: 2px solid black;
+  padding: 0.8rem 0.4rem;
+}
+
+/* Fetch Error  */
+.fetch-error {
+  color: red;
+  text-align: center;
+  margin-top: 15rem;
+  font-size: 1.5rem;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  margin-top: 15rem;
+  font-size: 1.5rem;
 }
